@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@AllArgsConstructor
 @Data
 @Builder
 @Table(name = "FIN_DATA")
@@ -20,4 +19,9 @@ public class FinancialData {
     @Column(name = "CATEGORY")
     public String category;
 
+    public FinancialData(Long id, String category) {
+
+        this.id = id;
+        this.category = category;
+    }
 }
